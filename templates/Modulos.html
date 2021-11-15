@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--Creamos la pagina principal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Menu desplegable barra lateral  GreenCase -->
+    <link rel="stylesheet" href="../assests/css/estilos.css">
+    <!-- Usamos algunos iconos de Boxiocns CDN Link al final usamos otros iconos mas lindos -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!--Colocamos el logo y nombre-->
+        <div class="logo-details">
+            <i class="icon"><img src="../assests/imagenes/logoGreenCase.png" width="50px" ></i>
+            <span class="logo_name">GREENCASE</span>
+        </div>
+        <!--Comenzamos a colocar los iconos en el menu desplegable-->
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Menu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ingresar parametros</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="icon"><img src="../assests/iconos/iconos_grandes/icons8-invernadero.png"></i>
+                        <span class="link_name">Ingresar parametros</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Ingresar parametros</a></li>
+                    <li><a href="#">Largo</a></li>
+                    <li><a href="#">Ancho</a></li>
+                    <li><a href="#">Cultivo</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="icon"><img src="../assests/iconos/iconos_grandes/icons8-arduino-64.png"></i>
+                        <span class="link_name">Modulo</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Modulos</a></li>
+                    <li><a href="#">Sensores</a></li>
+                    <li><a href="#">Relay</a></li>
+                    <li><a href="#">...</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon"><img src="../assests/iconos/iconos_grandes/icons8-grafico-40.png"></i>
+                    <span class="link_name">Grafico</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Grafica</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-plug'></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Plugins</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link_name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Explore</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon"><img src="../assests/iconos/iconos_grandes/icons8-setting-40.png"></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="../assests/imagenes/logoGreenCase.png" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Greencase</div>
+                        <div class="job">SALIR</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Pagina principal</span>
+
+        </div>
+    </section>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+
+</html>

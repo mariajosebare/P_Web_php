@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Comienza el css para el fondo verde que sea el mismo en todas las pantallas*/
+
+.fondo {
+    background-image: url(../imagenes/fondohojarocio.jpg);
+    background-size: cover;
+    background-position: center
+}
+
+body {
+    background-image: url(../imagenes/fondohojarocio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*Culmina la implemencacion del fondo verde*/
+
+
+/*Comenzamos con la implementacion del css para el navar*/
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background-image: url(../imagenes/fondohojarocio.jpg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 90%;
+    background: #61f7755e;
+    margin: auto;
+}
+
+nav .navbar .logo a {
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav .navbar .menu {
+    display: flex;
+}
+
+.navbar .menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #96c7e8;
+    font-size: 70px;
+}
+
+#Home {
+    background: rgb(25, 107, 43);
+}
+
+#About {
+    background: #f2f2f2;
+}
+
+#Category {
+    background: #e6e6e6;
+}
+
+#Latest {
+    background: #fff;
+}
+
+#Contact {
+    background: #f2f2f2;
+}
+
+#Feedback {
+    background: #e6e6e6;
+}
+
+.button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: black;
+    background: #239c48;
+    padding: 7px 12px;
+    ;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+
+/*A continuacion comienza el css del carruzel*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    clip-path: inset(47% 0 0 0);
+    z-index: -1;
+    height: 100%;
+}
+
+::selection {
+    background: black;
+    color: #fff;
+}
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.container .main-card {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200%;
+    transition: 1s;
+}
+
+#two:checked~.main-card {
+    margin-left: -100%;
+}
+
+.container .main-card .cards {
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+
+.main-card .cards .card {
+    width: calc(100% / 3 - 10px);
+    background: rgba(15, 97, 19, 0.719);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+}
+
+.main-card .cards .card:hover {
+    transform: translateY(-15px);
+}
+
+.cards .card .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .card .content .img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #ffff;
+    margin-bottom: 14px;
+}
+
+.card .content .img img {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .content .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card .content .des {
+    font-size: 20px;
+    color: black;
+}
+
+.card .content .media-icons {
+    margin-top: 10px;
+    display: flex;
+}
+
+.media-icons a {
+    text-align: center;
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    margin: 0 4px;
+    font-size: 14px;
+    color: black;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #ffff;
+    transition: all 0.3s ease;
+}
+
+.media-icons a:hover {
+    color: black;
+    background-color: #fff;
+    border-color: black;
+}
+
+.container .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.button label {
+    height: 15px;
+    width: 15px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    /*border: 9px double black;*/
+    border-radius: 20px;
+    background: rgb(32, 172, 50);
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button label.active {
+    width: 35px;
+}
+
+#one:checked~.button .one {
+    width: 35px;
+}
+
+#one:checked~.button .two {
+    width: 15px;
+}
+
+#two:checked~.button .one {
+    width: 15px;
+}
+
+#two:checked~.button .two {
+    width: 35px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-card .cards .card {
+        margin: 20px 0 10px 0;
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-card .cards .card {
+        /* margin: 20px 0 10px 0; */
+        width: 100%;
+    }
+}
+
+
+/* css boton ajustes*/
+
+.wrapper span {
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper span.num {
+    font-size: 50px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
